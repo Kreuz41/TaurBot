@@ -1,0 +1,32 @@
+﻿services:
+  taur-bot-api:
+    image: taur-bot-api
+    build:
+      context: .
+      dockerfile: taur-bot-api/Dockerfile
+    ports:
+      - 5000:8080
+    env_file: .env
+      
+  postgres:
+    image: postgres:latest
+    env_file: .env
+    volumes:
+      - taur_postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5430:5432
+    
+  bot:
+    image: taur-bot
+    build:
+      context: .
+      dockerfile: taur-bot/Dockerfile
+    env_file: .env
+    
+  ethapi:
+    image: eth:latest
+    ports:
+      - 5010:5011
+  
+volumes: 
+  taur_postgres_data:

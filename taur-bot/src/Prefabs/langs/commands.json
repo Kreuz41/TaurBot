@@ -1,0 +1,49 @@
+{
+  "start": [
+    "start"
+  ],
+  "changeLanguage": [
+    "🌐 Change Languagee",
+    "🌐 Сменить язык"
+  ],
+  "profile": [
+    "👤 Личный кабине",
+    "👤 Personal Account"
+  ],
+  "language": [
+    "English",
+    "Русский",
+    "Español",
+    "Қазақ",
+    "Deutsch",
+    "中文"
+  ],
+  "menu": [
+    "Menu",
+    "Меню"
+  ],
+  "deposit": [
+    "📥 Deposit",
+    "📥 Пополнение"
+  ],
+  "finances": [
+    "💳 Finances",
+    "💳 Финансы"
+  ],
+  "structure": [
+    "🌐 Structure",
+    "🌐 Структура"
+  ],
+  "invest": [
+    "📈 Invest",
+    "📈 Инвестировать"
+  ],
+  "pack": [
+    "Pack",
+    "Пакет"
+  ],
+  "createInvestment": [
+    "Create investment",
+    "Создать инвестицию"
+  ]
+}
