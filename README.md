@@ -36,7 +36,7 @@ ConnectionStrings__string="ur_conn_str"
 
 ## Запуск контейнеров с помощью Docker Compose:
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ## Проверка запуска:
@@ -50,7 +50,8 @@ API: Любые изменения в API могут быть внесены в 
 
 Команда для перезапуска:
 ```bash
-docker-compose up --build.
+docker compose down
+docker compose up --build.
 ```
 
 # Дополнительная информация
