@@ -1,60 +1,69 @@
-# Проект TaurBot
+# TaurBot Project 🤖
 
-## Описание
-Этот репозиторий содержит два проекта, предназначенных для создания и управления инвестиционным портфелем, а также для взаимодействия с пользователями через бота.
+## Description 📋
 
-## Проекты:
+This repository contains two projects aimed at creating and managing an investment portfolio, as well as interacting with users via a Telegram bot.
 
-taur-bot-api - это ASP.NET Core API, разработанный для управления инвестиционным портфелем. Он использует архитектурный шаблон MVC, внедрение зависимостей (DI), синглтоны и паттерн репозиторий для управления данными о портфеле.
+## Projects:
 
-taur-bot - это бот, который обращается к InvestmentAPI для взаимодействия с пользователями. Бот создан с использованием библиотеки Telegram.Bot, чтобы обеспечить удобное взаимодействие с пользователями.
+- **taur-bot-api**: This is an ASP.NET Core API designed for managing an investment portfolio. It uses the MVC architectural pattern, dependency injection (DI), singletons, and the repository pattern to handle portfolio data.
 
-ethapi - это API, разработанное специально для работы с криптовалютой.
+- **taur-bot**: This is a bot that communicates with the InvestmentAPI to interact with users. The bot is built using the Telegram.Bot library to provide a smooth user experience.
 
-Все проекты запускаются в контейнерах, а их работа организуется docker compose.
+- **ethapi**: This API is specifically designed for cryptocurrency operations.
 
-## Требования к системе
+All projects run in containers and are orchestrated via Docker Compose.
+
+## System Requirements ⚙️
+
 - Docker
 - Git
 
-## Запуск проекта
-Клонирование репозитория:
+## Getting Started 🚀
+
+Clone the repository:
 ```bash
 git clone https://github.com/Kreuz41/TaurBot.git
 ```
 
-## Настройка окружения:
-Перейдите в корневую директорию taur-bot-api и создайте файл .env, в котором определите следующие переменные окружения:
+## Setting up the Environment 🔧
+
+Navigate to the root directory of **taur-bot-api** and create a `.env` file, defining the following environment variables:
 ```env-file
 ASPNETCORE_ENVIRONMENT=Development
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=password
-ConnectionStrings__string="ur_conn_str"
+ConnectionStrings__string="your_connection_string"
 ```
 
-Не забудьте appsettings.json в проекте с ботом!
+Also, don’t forget to set up `appsettings.json` in the bot project!
 
-## Запуск контейнеров с помощью Docker Compose:
+## Running the Containers with Docker Compose 🐳
+
 ```bash
 docker compose up --build
 ```
 
-## Проверка запуска:
-После успешного запуска контейнеров проверьте доступность API и бота, перейдя по указанным адресам:
-- Для API: http://localhost:5000/swagger/index.html
-- Для бота: откройте свой Telegram и найдите бота по его имени или ID.
+## Verifying the Setup ✅
 
-Обслуживание и управление
-API: Любые изменения в API могут быть внесены в соответствующие контроллеры и сервисы в проекте taur-bot-api. После внесения изменений перезапустите контейнер с API
-Бот: Любые изменения в логике бота могут быть внесены в соответствующие файлы в проекте taur-bot. После внесения изменений перезапустите контейнер с ботом
+After the containers are successfully started, check the availability of the API and the bot by visiting the following addresses:
+- **API**: [http://localhost:5000/swagger/index.html](http://localhost:5000/swagger/index.html)
+- **Bot**: Open your Telegram app and search for the bot by its name or ID.
 
-Команда для перезапуска:
+## Maintenance and Management 🔄
+
+- **API**: Any changes to the API can be made in the corresponding controllers and services in the `taur-bot-api` project. After making changes, restart the API container.
+  
+- **Bot**: Any logic updates for the bot can be made in the relevant files of the `taur-bot` project. After making changes, restart the bot container.
+
+To restart the containers:
 ```bash
 docker compose down
-docker compose up --build.
+docker compose up --build
 ```
 
-# Дополнительная информация
-- Подробная документация API InvestmentAPI доступна на странице Swagger: http://localhost:5000/swagger/index.html.
-- Для настройки и изменения поведения бота обратитесь к соответствующей документации библиотеки Telegram.Bot.
-- Для работы с криптовалютой было использовано самописное API
+## Additional Information ℹ️
+
+- Detailed API documentation for the **InvestmentAPI** is available on the Swagger page: [http://localhost:5000/swagger/index.html](http://localhost:5000/swagger/index.html).
+- For configuring and modifying the bot behavior, refer to the documentation for the **Telegram.Bot** library.
+- The cryptocurrency operations are powered by a custom-built **ethapi**.
